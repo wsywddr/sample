@@ -43,6 +43,12 @@ public class RealmDataBaseActivity extends BaseActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mRealmHelper.close();
+    }
+
+    @Override
     protected void Initial() {
         mRealmHelper = new RealmHelper(mContext);
 

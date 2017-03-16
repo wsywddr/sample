@@ -21,6 +21,8 @@ import com.wsywddr.sample.util.Tools;
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -58,6 +60,12 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public long getItemId(int position) {
         return position;
+    }
+
+    public void addToHead(List<MyInfo> mLt)
+    {
+        mList.addAll(0,mLt);
+        notifyDataSetChanged();
     }
 
     @Override
