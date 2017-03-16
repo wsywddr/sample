@@ -45,6 +45,7 @@ import com.wsywddr.sample.util.network.databeans.ZhihuStory;
 import com.wsywddr.sample.util.network.disklrucache.Constants;
 import com.wsywddr.sample.util.network.disklrucache.DiskCacheManager;
 import com.wsywddr.sample.util.view.ExpandIconView;
+import com.wsywddr.sample.view.MyView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
@@ -72,6 +73,9 @@ public class StartActivity extends BaseActivity {
 
     @BindView(R.id.tv_base)
     TextView tv_base;
+
+    @BindView(R.id.myView)
+    MyView myView;
 
     @BindView(R.id.expand_icon)
     ExpandIconView expandIconView;
